@@ -3,7 +3,6 @@ import MySQLdb
 import os
 from werkzeug.utils import secure_filename
 
-
 app = Flask(__name__)
 app.secret_key="abc"
 con=MySQLdb.Connect(host='localhost',user='root',passwd='',port=3306,db="dev")
@@ -11,10 +10,9 @@ cmd=con.cursor()
 path1="C:\\Users\\Amrutha\\PycharmProjects\\project\\SHOPPING\\static\\image"
 @app.route('/')
 def home():
-    return render_template('Home.html')
-@app.route('/login')
-def login():
     return render_template('login.html')
+
+
 @app.route('/registerhere')
 def registerhere():
     return render_template('ShopRegistration.html')
@@ -28,18 +26,15 @@ def log():
     print(q)
 
     if q[3]=='admin':
-        return ''' <script>alert('ok');window.location='/ahome'</script> '''
+        return render_template("Admin_profile.html")
     elif q[3]=='shopowner':
         session['liid'] = q[0]
         session['liiid']=q[0]
         session['lid'] = q[0]
-        return ''' <script>alert('ok');window.location='/shome'</script> '''
+
     else:
         return '''<script>alert('invalid');window.location='/login'</script>'''
 
-@app.route('/ahome')
-def ahome():
-    return render_template("Admin_profile.html")
 @app.route('/shome')
 def shome():
     return render_template("shopownerprofile.html")
