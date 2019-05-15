@@ -23,17 +23,17 @@ def log():
     password=request.form['textfield2']
     cmd.execute("select * from tb_login where Username='"+name+"' and password='"+password+"'")
     q=cmd.fetchone()
-    print(q)
-
+    print(q[3])
     if q[3]=='admin':
         return render_template("Admin_profile.html")
     elif q[3]=='shopowner':
         session['liid'] = q[0]
         session['liiid']=q[0]
         session['lid'] = q[0]
-
+        return render_template("shopownerprofile.html")
     else:
         return '''<script>alert('invalid');window.location='/login'</script>'''
+
 
 @app.route('/shome')
 def shome():
@@ -42,12 +42,12 @@ def shome():
 @app.route('/select')
 def select():
     return render_template('select.html')
-@app.route('/existingshop')
-def existingshop():
+@app.route('/existing_shop')
+def existing_shop():
     cmd.execute("select tb_shop.* from tb_shop join tb_login on tb_shop.shop_id = tb_login.uid  where tb_login.usertype='shopowner'")
     p=cmd.fetchall()
     print(p)
-    return render_template("existingshop.html",val=p)
+    return render_template("existing_shop.html",val=p)
 @app.route('/viewshopownerprofile')
 def viewshopownerprofile():
     cmd.execute("select tb_shop.* from tb_shop join tb_login on tb_shop.shop_id = tb_login.uid  where tb_login.usertype='pending'")
@@ -435,7 +435,7 @@ def sendreplay():
 
 @app.route('/logout')
 def logout():
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 if __name__=="__main__":
