@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vr_shopping"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.vr_shopping.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Login"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Registration"
+            android:label="@string/title_activity_registration" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Agent_profile"
+            android:label="@string/title_activity_agent_profile" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.View_orederedproducts"
+            android:label="@string/title_activity_view_orederedproducts" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.User_details"
+            android:label="@string/title_activity_user_details" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Delivery_status"
+            android:label="@string/title_activity_delivery_status" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Billing"
+            android:label="@string/title_activity_billing" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Changepassword"
+            android:label="@string/title_activity_changepassword" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Viewprofile"
+            android:label="@string/title_activity_viewprofile" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custviewprofile"
+            android:label="@string/title_activity_custviewprofile" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custregistration"
+            android:label="@string/title_activity_custregistration" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custprofile"
+            android:label="@string/title_activity_custprofile" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custchangepswd"
+            android:label="@string/title_activity_custchangepswd" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Viewprdtdetails"
+            android:label="@string/title_activity_viewprdtdetails" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Shoppingcart"
+            android:label="@string/title_activity_shoppingcart" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Checkavailability"
+            android:label="@string/title_activity_checkavailability" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Viewprdtntfn"
+            android:label="@string/title_activity_viewprdtntfn" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Givefdbk"
+            android:label="@string/title_activity_givefdbk" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Aboutdelivery"
+            android:label="@string/title_activity_aboutdelivery" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Complaint"
+            android:label="@string/title_activity_complaint" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Viewrating"
+            android:label="@string/title_activity_viewrating" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Setting"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Customerlogin"
+            android:label="@string/title_activity_customerlogin" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Signup"
+            android:label="@string/title_activity_signup" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custom2"
+            android:label="@string/title_activity_custom2" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Bill"
+            android:label="@string/title_activity_bill" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Bills"
+            android:label="@string/title_activity_bills" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Billview"
+            android:label="@string/title_activity_billview" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Customer_billstatus"
+            android:label="@string/title_activity_customer_billstatus" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custom3"
+            android:label="@string/title_activity_custom3" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custom4"
+            android:label="@string/title_activity_custom4" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Complaintdetails"
+            android:label="@string/title_activity_complaintdetails" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Replys"
+            android:label="@string/title_activity_replys" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Trackorder"
+            android:label="@string/title_activity_trackorder" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custom5"
+            android:label="@string/title_activity_custom5" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Complaintset"
+            android:label="@string/title_activity_complaintset" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custom6"
+            android:label="@string/title_activity_custom6" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.ProductView"
+            android:label="@string/title_activity_product_view" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Shopview"
+            android:label="@string/title_activity_shopview" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Custom1"
+            android:label="@string/title_activity_custom1" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Shopping"
+            android:label="@string/title_activity_shopping" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Startpurchase"
+            android:label="@string/title_activity_startpurchase" >
+        </activity>
+        <activity
+            android:name="com.example.vr_shopping.Webview"
+            android:label="@string/title_activity_webview" >
+        </activity>
+    </application>
+
+</manifest>
